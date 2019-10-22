@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">ICTApp</string>
+    <string-array name="menu_items">
+        <item>Manage Crop</item>
+        <item>Vendor Demanding Near to you</item>
+        <item>View Alert's</item>
+        <item>View Order</item>
+        <item>Manage Profile</item>
+        <item>View Feedback</item>
+    </string-array>
+    <string-array name="menu_images">
+        <item>@drawable/ic_stat_icon</item>
+        <item>@drawable/ic_stat_near_you</item>
+        <item>@drawable/ic_stat_notification</item>
+        <item>@drawable/ic_stat_order</item>
+        <item>@drawable/ic_stat_profile</item>
+        <item>@drawable/ic_stat_feedback</item>
+    </string-array>
 </resources>
