@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgcolor">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageViewCropImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDescription"
+            app:layout_constraintEnd_toStartOf="@+id/textViewCropName"
+            app:layout_constraintHeight_percent=".3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".3"
+            app:riv_corner_radius="30dip"
+            app:riv_oval="true" />
+
+
+        <TextView
+            android:id="@+id/textViewCropName"
+            style="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Croque monsieur ricotta goat. "
+            android:textColor="@color/signintext"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewCategory"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonUpdate"
+            app:layout_constraintHeight_percent=".10"
+            app:layout_constraintStart_toEndOf="@+id/imageViewCropImage"
+            app:layout_constraintTop_toTopOf="@+id/imageViewCropImage"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textViewCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Red leicester mascarpone "
+            android:textColor="@color/signintext"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewCropImage"
+            app:layout_constraintEnd_toEndOf="@+id/textViewCropName"
+            app:layout_constraintStart_toStartOf="@+id/textViewCropName"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCropName" />
+
+        <ImageButton
+            android:id="@+id/imageButtonUpdate"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_stat_drop_down"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewCropName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textViewCropName"
+            app:layout_constraintTop_toTopOf="@+id/textViewCropName" />
+
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Edam port-salut melted cheese. Danish fontina fromage frais cottage cheese feta cow camembert de normandie lancashire cut the cheese. Cheeseburger stinking bishop fondue goat port-salut goat ricotta fromage frais. Fromage halloumi pepper jack."
+            android:textColor="@color/signintext"
+            app:layout_constraintBottom_toTopOf="@+id/imageButtonDelete"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonUpdate"
+            app:layout_constraintStart_toStartOf="@+id/imageViewCropImage"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCropImage" />
+
+
+        <TextView
+            android:id="@+id/textViewHarvestTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="16dp"
+            android:text="Harvest Time"
+            android:textColor="@color/signintext"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDescription"
+            app:layout_constraintStart_toEndOf="@+id/textViewRegisterDate"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
+
+        <ImageButton
+            android:id="@+id/imageButtonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_stat_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDescription"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewDescription"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
+
+        <TextView
+            android:id="@+id/textViewRegisterDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Date"
+            android:textColor="@color/signintext"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDescription"
+            app:layout_constraintHorizontal_bias="0.37"
+            app:layout_constraintStart_toStartOf="@id/textViewQuantity"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
+
+        <TextView
+            android:id="@+id/textViewQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:textColor="@color/signintext"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDescription"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="@id/imageButtonDelete"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

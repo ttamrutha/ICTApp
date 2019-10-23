@@ -1,4 +1,4 @@
-package com.example.ictapp;
+package com.example.ictapp.com.ict.adapter;
 
 
 import android.content.Context;
@@ -8,10 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.recyclerview.widget.RecyclerView;
+import com.example.ictapp.ManageMenuCropActivity;
+import com.example.ictapp.ManageProfile;
+import com.example.ictapp.NearDemands;
+import com.example.ictapp.R;
+import com.example.ictapp.ViewAlerts;
+import com.example.ictapp.ViewFeedBack;
+import com.example.ictapp.ViewOrder;
 
- 
+
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MyViewHolder> {
  Context context;
 
@@ -53,22 +59,22 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MyViewHolder> 
                 switch (position)
                 {
                     case 0:
-                        intent.setClass(context,ManageMenuCropActivity.class);
+                        intent.setClass(context, ManageMenuCropActivity.class);
                         break;
                     case 1:
-                        intent.setClass(context,NearDemands.class);
+                        intent.setClass(context, NearDemands.class);
                         break;
                     case 2:
-                        intent.setClass(context,ViewAlerts.class);
+                        intent.setClass(context, ViewAlerts.class);
                         break;
                     case 3:
-                        intent.setClass(context,ViewOrder.class);
+                        intent.setClass(context, ViewOrder.class);
                         break;
                     case 4:
-                        intent.setClass(context,ManageProfile.class);
+                        intent.setClass(context, ManageProfile.class);
                         break;
                     case 5:
-                        intent.setClass(context,ViewFeedBack.class);
+                        intent.setClass(context, ViewFeedBack.class);
                         break;
                 }
                 context.startActivity(intent);
