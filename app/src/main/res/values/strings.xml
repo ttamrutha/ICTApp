@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ICTApp</string>
-    <string-array name="menu_items">
+    <!--<string-array name="menu_items">
         <item>Manage Crop</item>
         <item>Vendor Demanding Near to you</item>
         <item>View Alert's</item>
@@ -15,5 +15,5 @@
         <item>@drawable/ic_stat_order</item>
         <item>@drawable/ic_stat_profile</item>
         <item>@drawable/ic_stat_feedback</item>
-    </string-array>
+    </string-array>-->
 </resources>

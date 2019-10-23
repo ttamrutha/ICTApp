@@ -11,13 +11,13 @@ public class HomeMenu  {
         this.title = title;
     }
 
-    public String  getImage() {
+    public int  getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
-    String image;
+    int image;
 }
