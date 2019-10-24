@@ -16,7 +16,7 @@
 
 
             <ImageView
-                android:id="@+id/logo"
+                android:id="@+id/imageViewCrop"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_margin="40dp"
@@ -36,26 +36,39 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="20dp"
                 android:background="@color/signintext" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/signintext"
+                android:paddingTop="10dp"
+                android:text="Select Category" />
+
             <com.jaredrummler.materialspinner.MaterialSpinner
                 android:id="@+id/spinnerCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:drawableLeft="@drawable/ic_stat_drop_down"
-
-                />
+                android:layout_marginTop="20dp" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="20dp"
                 android:background="@color/signintext" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/signintext"
+                android:paddingTop="10dp"
+                android:text="Select- Crop " />
+
             <com.jaredrummler.materialspinner.MaterialSpinner
                 android:id="@+id/spinnerCrop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:drawableLeft="@drawable/ic_stat_drop_down"
-
                 />
             <View
                 android:layout_width="match_parent"
