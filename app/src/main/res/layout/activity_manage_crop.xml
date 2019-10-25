@@ -76,7 +76,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@color/signintext" />
         <EditText
-            android:id="@+id/crop_price"
+            android:id="@+id/crop_quantity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#0000"
@@ -128,7 +128,7 @@
 
 
             <EditText
-                android:id="@+id/signin"
+                android:id="@+id/signup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"

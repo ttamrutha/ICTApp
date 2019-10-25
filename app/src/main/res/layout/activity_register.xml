@@ -96,7 +96,7 @@
                 android:background="#0000"
                 android:drawableLeft="@drawable/ic_stat_phone"
                 android:drawablePadding="35dp"
-                android:hint="Email"
+                android:hint="Phone "
                 android:inputType="text"
                 android:maxLength="20"
                 android:padding="16dp"
@@ -140,7 +140,7 @@
                 android:layout_marginBottom="20dp"/>
 
             <EditText
-                android:id="@+id/signin"
+                android:id="@+id/signup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -151,7 +151,7 @@
                 android:background="@drawable/rect"
                 android:gravity="center"
                 android:padding="13dp"
-                android:text="Sign in"
+                android:text="Sign Up"
                 android:textColor="#9e3d41"
                 android:textSize="20dp"
 

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="false"
+        app:contentPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:paddingTop="65dp">
+
+            <TextView
+                android:id="@+id/HarvestTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="12/10/2019"
+                android:textColor="#47485b"
+                android:transitionName="year"
+                app:layout_constraintEnd_toEndOf="@+id/CropName"
+                app:layout_constraintStart_toStartOf="@+id/CropName"
+                app:layout_constraintTop_toBottomOf="@+id/CropName" />
+
+            <TextView
+                android:id="@+id/rating1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:textColor="#17193a"
+                android:textSize="24sp"
+                android:transitionName="rating1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/HarvestTime" />
+
+            <RatingBar
+                android:id="@+id/famerRating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="247dp"
+                android:layout_marginRight="247dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:transitionName="rating2"
+                app:layout_constraintBottom_toBottomOf="@+id/rating1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rating1"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/Quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="282dp"
+                android:layout_marginRight="282dp"
+                android:layout_marginBottom="9dp"
+                android:textColor="#47485b"
+                android:textSize="24sp"
+                android:transitionName="director"
+                app:layout_constraintBottom_toTopOf="@+id/cropDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/rating1"
+                app:layout_constraintTop_toBottomOf="@+id/rating1"
+                tools:text="20kg" />
+
+            <TextView
+                android:id="@+id/cropDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="23dp"
+                android:text="Dessert sweet roll caramels soufflé apple pie. Macaroon sugar plum lollipop jujubes pie. Chocolate bar cupcake liquorice croissant oat cake danish. Apple pie toffee muffin cookie I love I love I love tootsie roll gummi bears.  "
+                android:textColor="#47485b"
+                app:layout_constraintBottom_toTopOf="@+id/buttonbuy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Quantity" />
+
+            <Button
+                android:id="@+id/buttonbuy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/bgcolor1"
+                android:text="Buy"
+                android:textColor="#fff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/cropDescription"
+                app:layout_constraintStart_toStartOf="@+id/cropDescription"
+                app:layout_constraintTop_toBottomOf="@+id/cropDescription" />
+
+            <TextView
+                android:id="@+id/CropName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="141dp"
+                android:layout_marginLeft="141dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="126dp"
+                android:layout_marginRight="126dp"
+                android:text="Tamoto"
+                android:textColor="#17193a"
+                android:textSize="24sp"
+                android:transitionName="movie"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/CropName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bgg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
