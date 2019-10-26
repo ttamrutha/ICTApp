@@ -1,7 +1,50 @@
 package com.example.ictapp.org.ict.pojos;
 
-public class CropDetails {
-    String cropName,cropDescription,cropHarvestTime,cropRegisterDate,cropImage;
+public class OrderDetails {
+    String cropName;
+    String cropDescription;
+    String cropHarvestTime;
+    String cropOrderDate;
+    String cropImage;
+    String cropCategory;
+    String vendorName;
+    String orderDate;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    double price;
+
+    public String getVendorName() {
+        return vendorName;
+    }
+
+    public void setVendorName(String vendorName) {
+        this.vendorName = vendorName;
+    }
+
+    public String getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(String orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    String status;
     int cropId;
 
     public String getCropName() {
@@ -28,12 +71,12 @@ public class CropDetails {
         this.cropHarvestTime = cropHarvestTime;
     }
 
-    public String getCropRegisterDate() {
-        return cropRegisterDate;
+    public String getcropOrderDate() {
+        return cropOrderDate;
     }
 
-    public void setCropRegisterDate(String cropRegisterDate) {
-        this.cropRegisterDate = cropRegisterDate;
+    public void setcropOrderDate(String cropOrderDate) {
+        this.cropOrderDate = cropOrderDate;
     }
 
     public String getCropImage() {
@@ -70,5 +113,5 @@ public class CropDetails {
         this.cropCategory = cropCategory;
     }
 
-    String cropCategory;
+
 }

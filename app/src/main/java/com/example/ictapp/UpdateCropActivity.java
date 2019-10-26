@@ -3,6 +3,7 @@ package com.example.ictapp;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -113,70 +114,26 @@ public class UpdateCropActivity extends AppCompatActivity {
     }
 
     private void loadData() {
-        final ProgressDialog dialog = ProgressDialog.show(UpdateCropActivity.this, null, "LOADING..");
+        Bundle extras = getIntent().getExtras();
 
-        StringRequest strReq = new StringRequest(Request.Method.POST, Config.URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                //Toast.makeText(RegisterActivity.this, response, Toast.LENGTH_SHORT).show();
-                dialog.dismiss();
-                try {
-                    JSONObject jsonObject = new JSONObject(response);
-                    int rs = jsonObject.getInt("status");
-                    if (rs == 0) {
-                        processData(jsonObject);
-                    } else {
-                        AlertMessage.callSnackBar(editTextUpdate, "Something went wrong!!! try again...");
-
-                    }
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(),
-                        "Network error! Check your internet connection!" + error.getMessage(),
-                        Toast.LENGTH_SHORT).show();
-            }
-        }) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                params.put("manage_crop_id", manage_crop_id + "");
-
-                return params;
-            }
-        };
-        AppController.getInstance().addToRequestQueue(strReq);
-    }
-
-    private void processData(JSONObject jsonObject) {
-        try {
-
-            cropName = jsonObject.getString("crop_name");
-            cropDescription = jsonObject.getString("crop_description");
-            cropImage = jsonObject.getString("crop_image");
-            cropRegisterDate = jsonObject.getString("register_date");
-            harvestDate = jsonObject.getString("harvest_date");
-            cropImage = jsonObject.getString("crop_image");
-            quantity = Integer.parseInt(jsonObject.getString("crop_quantity").toString());
-            textViewCropName.setText(cropName);
-            textViewCropDescription.setText(cropName);
-            textViewRegisterDate.setText(cropRegisterDate);
-            textViewCropQuantity.setText(quantity);
+        if (extras != null) {
+            cropName = extras.getString("crop_name");
+            cropDescription = extras.getString("crop_description");
+            cropRegisterDate = extras.getString("crop_register_date");
+            harvestDate = extras.getString("crop_harvest_time");
+            quantity = extras.getInt("crop_quantity");
+            manage_crop_id=extras.getInt("manage_crop_id");
+            cropImage=extras.getString("crop_image");
             textViewCropHarvestTime.setText(harvestDate);
-            Bitmap bitmap = stringToBitMap(cropImage);
-            imageViewCrop.setImageBitmap(bitmap);
-
-
-        } catch (JSONException e) {
-            e.printStackTrace();
+            textViewCropQuantity.setText(quantity);
+            textViewRegisterDate.setText(cropRegisterDate);
+            textViewCropDescription.setText(cropDescription);
+            textViewCropName.setText(cropName);
+            imageViewCrop.setImageBitmap(stringToBitMap(cropImage));
         }
     }
+
+
 
     public Bitmap stringToBitMap(String encodedString) {
         try {

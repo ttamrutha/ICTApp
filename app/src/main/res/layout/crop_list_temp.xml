@@ -18,8 +18,8 @@
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/imageViewCropImage"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
@@ -27,7 +27,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="16dp"
             android:scaleType="centerInside"
-            android:src="@drawable/logo"
+            android:src="@drawable/bg"
             app:layout_constraintBottom_toTopOf="@+id/textViewDescription"
             app:layout_constraintEnd_toStartOf="@+id/textViewCropName"
             app:layout_constraintHeight_percent=".3"
@@ -85,6 +85,16 @@
             app:layout_constraintStart_toEndOf="@+id/textViewCropName"
             app:layout_constraintTop_toTopOf="@+id/textViewCropName" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/signintext"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCropImage" />
 
         <TextView
             android:id="@+id/textViewDescription"
