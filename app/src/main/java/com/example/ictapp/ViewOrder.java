@@ -140,7 +140,7 @@ public class ViewOrder extends AppCompatActivity {
                     OrderDetails orderDetails = new OrderDetails();
                     orderDetails.setCropName(cropName);
                     orderDetails.setCropDescription(cropDescription);
-                    orderDetails.setCropHarvestTime(cropHarvestTime);
+                    orderDetails.setOrderDate(cropHarvestTime);
                     orderDetails.setCropImage(cropImage);
                     orderDetails.setCropCategory(cropCategory);
                     orderDetails.setCropQuantity(cropQuantity);

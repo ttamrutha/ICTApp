@@ -3,7 +3,6 @@ package com.example.ictapp.org.ict.pojos;
 public class OrderDetails {
     String cropName;
     String cropDescription;
-    String cropHarvestTime;
     String cropOrderDate;
     String cropImage;
     String cropCategory;
@@ -61,22 +60,6 @@ public class OrderDetails {
 
     public void setCropDescription(String cropDescription) {
         this.cropDescription = cropDescription;
-    }
-
-    public String getCropHarvestTime() {
-        return cropHarvestTime;
-    }
-
-    public void setCropHarvestTime(String cropHarvestTime) {
-        this.cropHarvestTime = cropHarvestTime;
-    }
-
-    public String getcropOrderDate() {
-        return cropOrderDate;
-    }
-
-    public void setcropOrderDate(String cropOrderDate) {
-        this.cropOrderDate = cropOrderDate;
     }
 
     public String getCropImage() {
